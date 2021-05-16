@@ -33,4 +33,5 @@ const nextYear = `${currentYear + 1}-${currentMonth}-${currentDay}`;
 // fetching games from the last year to the current date, ordered by rating (ascending order), 10 per page
 const popular_games = `${base_url}/games?dates=${lastYear},${currentDate}&ordering=-rating&page_size=10`;
 
-
+export const popularGamesUrl = () => `${popular_games}`;
+console.log(popularGamesUrl()); // use: node src/api.js and remote the export because gives error
