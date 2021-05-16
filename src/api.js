@@ -34,4 +34,4 @@ const nextYear = `${currentYear + 1}-${currentMonth}-${currentDay}`;
 const popular_games = `${base_url}/games?dates=${lastYear},${currentDate}&ordering=-rating&page_size=10`;
 
 export const popularGamesUrl = () => `${popular_games}`;
-console.log(popularGamesUrl()); // use: node src/api.js and remote the export because gives error
+// console.log(popularGamesUrl()); // use: node src/api.js and remote the export because gives error
