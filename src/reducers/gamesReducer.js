@@ -52,4 +52,16 @@ export default gamesReducer;
       in between the store, reducers and actions. In a way we can use "redux-thunk". Compose, nasically
       combines multiple arguments in the createStore.
 
+      steps:
+      1 import {createStore, compose, applyMiddleware} from 'redux';
+      2 import thunk from "redux-thunk";
+      3 const composeEnchancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose; //extension
+                this allow us to use the extension together with thunk
+      4 fix the store using "applyMiddleware":
+                const store = createStore(
+                  rootReducer,
+                  composeEnchancer(applyMiddleware(thunk))
+                );
+
+
 */
