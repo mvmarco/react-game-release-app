@@ -49,7 +49,7 @@ export default gamesReducer;
       first by:
       1. import { createStore, applyMiddleware, compose } from "redux";
       applyMiddleWare check on every action that has been dispatch. And it is gonna add something
-      in between the store, reducers and actions. In a way we can use "redux-thunk". Compose, nasically
+      in between the store, reducers and actions. In a way we can use "redux-thunk". Compose, basically
       combines multiple arguments in the createStore.
 
       steps:
