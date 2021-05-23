@@ -41,3 +41,9 @@ export const popularGamesUrl = () => `${base_url}${popular_games}`;
 // console.log(popularGamesUrl()); // use: node src/api.js and remote the export because gives error
 export const upcomingGamesURL = () => `${base_url}${upcoming_games}`;
 export const newGamesURL = () => `${base_url}${newGames}`;
+
+
+/* 
+  once we have our api functions we pass them to the action (action creator) with async/redux thunk
+  then to the reducer, to update the state
+*/
