@@ -10,13 +10,10 @@ import { Provider } from "react-redux";
 // redux-thunk setup
 import thunk from "redux-thunk";
 
-const composeEnchancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose; //extension
+const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;//extension
 
 // store with redux devTools
-const store = createStore(
-  rootReducer,
-  composeEnchancer(applyMiddleware(thunk))
-);
+const store = createStore(rootReducer, composeEnhancer(applyMiddleware(thunk)));
 
 ReactDOM.render(
   <React.StrictMode>
