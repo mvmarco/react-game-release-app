@@ -14,14 +14,22 @@ const Home = () => {
   useEffect(() => {
     dispatch(loadGames())
   }, [dispatch]); // passing dispatch to let the useEffect run only when we dispatch, it is async
-  // get the data that needed with UseSelector
-  const games = useSelector(store => store.games) // we take .games because it is the name of the root reducer
-  console.log(games.popular, games.upcoming, games.newGames) // this is --> rootReducer --> gamesReducer
+  /* 
+    get the data needed with UseSelector
+    const games = useSelector(store => store.games) 
+    // we take .games because it is the name of the root reducer
+    console.log(games.popular, games.upcoming, games.newGames) // this is --> rootReducer --> gamesReducer
+    instead of doing this way we can extract all the specific result from a function 
+    returning an object, like this:
+  */
+  const {popular, upcoming, newGames} = useSelector((store) => store.games);
   return (
-    <div>
-      <h1>Home</h1>
-    </div>
+    <GameList>
+      <h1>Upcoming games: {upcoming}</h1>
+    </GameList>
   );
 };
+const GameList = styled(motion.div) `
 
+`;
 export default Home;
