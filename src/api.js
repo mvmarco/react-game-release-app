@@ -7,7 +7,7 @@ const base_url = "https://api.rawg.io/api/";
 // months
 const getCurrentMonth = () => {
   const month = new Date().getMonth() + 1;
-  console.log(month); // here month without + 1 is the previous one, not sure why
+  // console.log(month); // here month without + 1 is the previous one, not sure why
   if (month < 10) {
     return `0${month}`;
   } else {
@@ -17,7 +17,7 @@ const getCurrentMonth = () => {
 // days
 const getCurrentDay = () => {
   const day = new Date().getDate();
-  console.log(day);
+  // console.log(day);
   if (day < 10) {
     return `0${day}`;
   } else {
