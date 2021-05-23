@@ -1,4 +1,6 @@
 // styling and animation
+import styled from "styled-components";
+import {motion} from "framer-motion";
 
 const Game = () => {
   return(
