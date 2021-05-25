@@ -17,10 +17,10 @@ const GlobalStyles = createGlobalStyle`
 
    html{
         &::-webkit-scrollbar{
-            width: 0.5rem;
+            width: 0.9rem;
         }
         &::-webkit-scrollbar-thumb{
-            background-color: red;
+            background-color: #333;
         }
         &::-webkit-scrollbar-track {
     background: white;
@@ -32,8 +32,8 @@ const GlobalStyles = createGlobalStyle`
     }
     h2{
         font-size: 3rem;
-        font-family: 'Abril Fatface', cursive;
-        font-weight: lighter;
+        font-family: 'Bebas Neue';       
+        font-weight: lighter; 
         color: #333;
     }
     h3{

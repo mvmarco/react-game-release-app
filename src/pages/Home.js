@@ -25,10 +25,36 @@ const Home = () => {
   const {popular, upcoming, newGames} = useSelector((store) => store.games);
   return (
     <GameList>
-      <h1>Upcoming games</h1>
+      <h2>Upcoming Games</h2>
       <Games>
         {upcoming.map((game) => (
-          <Game 
+          <Game
+            name={game.name}
+            released={game.released}
+            rating={game.rating}
+            id={game.id}
+            image={game.background_image}
+            key={game.id}
+          />
+        ))}
+      </Games>
+      <h2>Popular Games</h2>
+      <Games>
+        {popular.map((game) => (
+          <Game
+            name={game.name}
+            released={game.released}
+            rating={game.rating}
+            id={game.id}
+            image={game.background_image}
+            key={game.id}
+          />
+        ))}
+      </Games>
+      <h2>New Games</h2>
+      <Games>
+        {newGames.map((game) => (
+          <Game
             name={game.name}
             released={game.released}
             rating={game.rating}
