@@ -26,6 +26,7 @@ const Home = () => {
   return (
     <GameList>
       <h1>Upcoming games: {upcoming}</h1>
+      
     </GameList>
   );
 };
