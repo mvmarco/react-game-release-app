@@ -25,12 +25,34 @@ const Home = () => {
   const {popular, upcoming, newGames} = useSelector((store) => store.games);
   return (
     <GameList>
-      <h1>Upcoming games: {upcoming}</h1>
-      
+      <h1>Upcoming games</h1>
+      <Games>
+        {upcoming.map((game) => (
+          <Game 
+            name={game.name}
+            released={game.released}
+            rating={game.rating}
+            id={game.id}
+            image={game.background_image}
+            key={game.id}
+          />
+        ))}
+      </Games>
     </GameList>
   );
 };
-const GameList = styled(motion.div) `
 
+// styled components
+const GameList = styled(motion.div)`
+  padding: 0rem 5rem;
+  h2 {
+    padding: 5rem 0rem;
+  }
+`;
+
+const Games = styled(motion.div)`
+  min-height: 80vh;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr)); // 
 `;
 export default Home;

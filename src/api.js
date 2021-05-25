@@ -37,7 +37,7 @@ const popular_games = `games?key=${key_url}&dates=${lastYear},${currentDate}&ord
 const upcoming_games = `games?key=${key_url}&dates=${currentDate},${nextYear}&ordering=-added&page_size=10`;
 const newGames = `games?key=${key_url}&dates=${lastYear},${currentDate}&ordering=-released&page_size=10`;
 
-export const popularGamesUrl = () => `${base_url}${popular_games}`;
+export const popularGamesURL = () => `${base_url}${popular_games}`;
 // console.log(popularGamesUrl()); // use: node src/api.js and remote the export because gives error
 export const upcomingGamesURL = () => `${base_url}${upcoming_games}`;
 export const newGamesURL = () => `${base_url}${newGames}`;

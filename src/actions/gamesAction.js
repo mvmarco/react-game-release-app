@@ -1,5 +1,5 @@
 import axios from "axios";
-import { popularGamesUrl, upcomingGamesURL, newGamesURL } from "../api";
+import { popularGamesURL, upcomingGamesURL, newGamesURL } from "../api";
 
 /* 
   here we use ::::ACTION CREATOR, a function that returns an action. 
@@ -20,8 +20,8 @@ import { popularGamesUrl, upcomingGamesURL, newGamesURL } from "../api";
   but this data has to be asyncronous 
 */
 export const loadGames = () => async (dispatch) => {
-  // fetch axios
-  const popularData = await axios.get(popularGamesUrl());
+  //FETCH AXIOS
+  const popularData = await axios.get(popularGamesURL());
   const newGamesData = await axios.get(newGamesURL());
   const upcomingData = await axios.get(upcomingGamesURL());
   dispatch({

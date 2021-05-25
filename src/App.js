@@ -15,7 +15,6 @@ function App() {
  
   return (
     <div className="App">
-      <h1>Game Release</h1>
       <Home />
     </div>
   );
